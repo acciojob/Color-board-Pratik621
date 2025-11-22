@@ -2,13 +2,13 @@
 const main=document.querySelector(".container");
 for(let i=0;i<800;i++){
 	const squares=document.createElement("div")
-	 squares.classList.add("sqaure");
+	 squares.classList.add("square");
 
 	squares.addEventListener("mouseenter",()=>{
 		let color=randomColor();
 		squares.style.backgroundColor=color;
 		setTimeout(()=>{
-			squares.style.backgroundColor="#111";
+			squares.style.backgroundColor="rgb(29, 29, 29)";
 			
 	},1000)
 		
