@@ -1,21 +1,21 @@
 //your JS code here. If required.
 const main=document.querySelector(".container");
 for(let i=0;i<800;i++){
-	const squares=document.createElement("div")
-	 squares.classList.add("square");
+	const square=document.createElement("div")
+	 square.classList.add("square");
 
-	squares.addEventListener("mouseenter",()=>{
+	square.addEventListener("mouseover",()=>{
 		let color=randomColor();
-		squares.style.backgroundColor=color;
-		setTimeout(()=>{
-			squares.style.backgroundColor="rgb(29, 29, 29)";
-			
-	},1000)
+		square.style.backgroundColor=color;
+		
 		
 	})
+	 square.addEventListener("mouseout", () => {
+        square.style.backgroundColor = "rgb(29, 29, 29)";
+    });
+
 	
-	
-	 main.appendChild(squares);
+	 main.appendChild(square);
 	
 }
 function randomColor() {
